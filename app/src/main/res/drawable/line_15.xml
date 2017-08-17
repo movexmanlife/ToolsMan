@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid
+                android:layout_width="1px"
+                android:color="@color/white"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="15dp">
+        <!-- 在实际使用中我发现1dp达不到显示效果，而2dp正好可以显示边框 -->
+
+        <shape android:shape="rectangle">
+            <solid
+                android:layout_width="1px"
+                android:color="#d9d9d9"/>
+        </shape>
+    </item>
+</layer-list>

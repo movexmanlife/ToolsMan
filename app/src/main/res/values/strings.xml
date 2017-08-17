@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ToolsMan</string>
+    <string name="version_name">V%1$s</string>
+</resources>
