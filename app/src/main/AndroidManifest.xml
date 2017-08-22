@@ -3,20 +3,70 @@
           package="com.robot.toolsman">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".App"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.about.AboutActivity">
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:label="主页"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:label="关于页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.action.ActionActivity"
+            android:label="活动页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.category.CategoryActivity"
+            android:label="分类筛选页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.event.EventActivity"
+            android:label="具体事件页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.map.GDMapActivity"
+            android:label="高德地图页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.schedule.ScheduleActivity"
+            android:label="计划安排页面"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.showpicture.ShowPictureActivity"
+            android:label="图片展示页面"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.location.LocationActivity"
+            android:label="豆瓣同城"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_img_array">
+        <item>@drawable/tab_home_img_sel</item>
+        <item>@drawable/tab_list_img_sel</item>
+        <item>@drawable/tab_me_img_sel</item>
+    </string-array>
+</resources>

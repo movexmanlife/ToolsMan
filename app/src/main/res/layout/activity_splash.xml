@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/slogan_paper"/>
+
+    <TextView
+        android:id="@+id/splash_btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_splash_btn"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="跳过"
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
+
+
+</FrameLayout>

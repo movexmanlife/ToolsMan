@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ToolsMan</string>
     <string name="version_name">V%1$s</string>
+    <string name="tab_home_text">首页</string>
+    <string name="tab_list_text">列表</string>
+    <string name="tab_me_text">我的</string>
 </resources>

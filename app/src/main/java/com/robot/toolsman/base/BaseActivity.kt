@@ -11,12 +11,12 @@ import butterknife.Unbinder
 abstract class BaseActivity : AppCompatActivity() {
 
     abstract val layout: Int
-    private lateinit var mUnbinder : Unbinder;
+    private lateinit var mUnbinder : Unbinder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout)
-        mUnbinder = ButterKnife.bind(this);
+        mUnbinder = ButterKnife.bind(this)
     }
 
     override fun onDestroy() {

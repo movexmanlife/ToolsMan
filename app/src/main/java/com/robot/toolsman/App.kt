@@ -8,12 +8,12 @@ class App : Application() {
         /**
          * 定义静态变量sContext
          */
-        lateinit var sContext :Context
+        lateinit var sContext: Context
 
         /**
          * 定义静态方法
          */
-        fun getContext() : Context {
+        fun getContext(): Context {
             return sContext
         }
     }
