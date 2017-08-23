@@ -1,16 +1,13 @@
 package com.robot.toolsman.ui.home.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 
 import com.robot.toolsman.R;
 import com.robot.toolsman.bean.InfoBean;
@@ -39,11 +36,10 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
         holder.tv.setText(infoBean.getText());//填充数据
 
         if (infoBean.getImgList() != null && infoBean.getImgList().size() > 0) {
-//            ImageAdapter imageAdapter = new ImageAdapter(mContext, infoBean.getImgList());
-//            holder.rv_grid.setLayoutManager(new GridLayoutManager(mContext,3));
-//            holder.rv_grid.setAdapter(imageAdapter);
-//            holder.rv_grid.setVisibility(View.VISIBLE);
-            holder.rv_grid.setVisibility(View.GONE);
+            ImageAdapter imageAdapter = new ImageAdapter(mContext, infoBean.getImgList());
+            holder.rv_grid.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
+            holder.rv_grid.setAdapter(imageAdapter);
+            holder.rv_grid.setVisibility(View.VISIBLE);
         } else {
             holder.rv_grid.setVisibility(View.GONE);
         }

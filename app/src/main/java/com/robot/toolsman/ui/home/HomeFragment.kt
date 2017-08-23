@@ -61,7 +61,7 @@ class HomeFragment : BaseFragment(), HomeMvpView {
         imageList.add("https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=f3f6ab70cc134954611eef64664f92dd/dcc451da81cb39db1bd474a7d7160924ab18302e.jpg")
         imageList.add("https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=71cd4229be014a909e3e41bd99763971/472309f7905298221dd4c458d0ca7bcb0b46d442.jpg")
         imageList.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1564533037,3918553373&fm=116&gp=0.jpg")
-        for (i in 1..29) {
+        for (i in 1..5) {
             val info = InfoBean()
             info.setText("TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT" + i)
             info.setImgList(imageList)

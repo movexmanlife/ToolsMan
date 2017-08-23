@@ -11,6 +11,7 @@ import butterknife.BindView
 import butterknife.OnClick
 import com.robot.toolsman.R
 import com.robot.toolsman.base.BaseActivity
+import com.robot.toolsman.ui.about.AboutActivity
 import com.robot.toolsman.ui.main.MainActivity
 import com.robot.toolsman.util.visible
 
