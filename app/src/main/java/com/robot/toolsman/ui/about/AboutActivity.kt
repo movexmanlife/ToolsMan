@@ -1,7 +1,10 @@
 package com.robot.toolsman.ui.about
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import butterknife.BindView
@@ -23,6 +26,13 @@ class AboutActivity : BaseActivity(), AboutMvpView {
     lateinit var mLayoutGithub : LinearLayout
 
     lateinit var mAboutPresenter : AboutPresenter
+
+    companion object {
+        fun start(context : Context) {
+            var intent = Intent(context, AboutActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
     override val layout: Int
         get() = R.layout.activity_about
