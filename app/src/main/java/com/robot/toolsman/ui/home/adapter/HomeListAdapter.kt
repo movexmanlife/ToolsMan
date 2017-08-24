@@ -15,7 +15,7 @@ import com.robot.toolsman.bean.HomeBean
 
 class HomeListAdapter(var mContext: Context, var mDataList: List<HomeBean>, var mOnItemClicker: OnItemClick?) : RecyclerView.Adapter<HomeListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        var view = LayoutInflater.from(mContext).inflate(R.layout.item_home, null)
+        var view = View.inflate(mContext, R.layout.item_home, null)
         return ViewHolder(view, mOnItemClicker)
     }
 
@@ -27,13 +27,15 @@ class HomeListAdapter(var mContext: Context, var mDataList: List<HomeBean>, var 
         var infoBean = mDataList.get(position)
 
         infoBean.imgList?.isNotEmpty()?.let {
-            if (it) {
-                val imageAdapter = HomeInnerAdapter(mContext, infoBean.imgList!!, null)
-                holder.recyclerView.setLayoutManager(LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false))
-                holder.recyclerView.setAdapter(imageAdapter)
-                holder.recyclerView.setVisibility(View.VISIBLE)
-            } else {
-                holder.recyclerView.setVisibility(View.GONE)
+            with(holder){
+                if (it) {
+                    val imageAdapter = HomeInnerAdapter(mContext, infoBean.imgList!!, null)
+                    recyclerView.setLayoutManager(LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false))
+                    recyclerView.setAdapter(imageAdapter)
+                    recyclerView.setVisibility(View.VISIBLE)
+                } else {
+                    recyclerView.setVisibility(View.GONE)
+                }
             }
         }
     }

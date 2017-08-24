@@ -16,7 +16,8 @@ import com.robot.toolsman.bean.HomeInnerBean
 
 class HomeInnerAdapter(var mContext: Context, var mDataList: List<HomeInnerBean>, var mOnItemClicker: OnItemClick?) : RecyclerView.Adapter<HomeInnerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        var view = LayoutInflater.from(mContext).inflate(R.layout.item_home_inner, null)
+        // var view = LayoutInflater.from(mContext).inflate(R.layout.item_home_inner, null)
+        var view = View.inflate(mContext, R.layout.item_home_inner, null)
         return ViewHolder(view, mOnItemClicker)
     }
 
@@ -25,22 +26,22 @@ class HomeInnerAdapter(var mContext: Context, var mDataList: List<HomeInnerBean>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var content = mDataList.get(position).content
-        if (!TextUtils.isEmpty(content)) {
-            holder.contentTv.text = content
-        }
+        var homeInnerBean = mDataList.get(position)
 
-        var time = mDataList.get(position).time
-        if (!TextUtils.isEmpty(time)) {
-            holder.timeTv.text = time
-        }
+        with(holder) {
+            if (!TextUtils.isEmpty(homeInnerBean.content)) {
+                contentTv.text = homeInnerBean.content
+            }
+            if (!TextUtils.isEmpty(homeInnerBean.time)) {
+                timeTv.text = homeInnerBean.time
+            }
 
-        val url = mDataList.get(position).url
-        GlideApp.with(mContext)
-                .load(url)
-                .placeholder(R.mipmap.ic_launcher)
-                .centerCrop()
-                .into(holder.iconIv)
+            GlideApp.with(mContext)
+                    .load(homeInnerBean.url)
+                    .placeholder(R.mipmap.ic_launcher)
+                    .centerCrop()
+                    .into(iconIv)
+        }
     }
 
     inner class ViewHolder(var item: View, var onItemClick: OnItemClick?) : RecyclerView.ViewHolder(item), View.OnClickListener {
