@@ -7,103 +7,106 @@
     android:orientation="vertical"
     tools:context=".ui.about.AboutActivity">
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:src="@mipmap/ic_launcher"/>
-
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        tools:text="V1.0.0"/>
+        android:layout_gravity="left"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        tools:text="活动时间"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:background="#d9d9d9"/>
 
     <LinearLayout
-        android:id="@+id/layout_update"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/common_item_sel"
+        android:clickable="true"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/schedule_date1_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:text="检查更新"/>
+            tools:text="8月24日 周四"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+        <TextView
+            android:id="@+id/schedule_time1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/icon_arrow_light_grey"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="#999999"
+            tools:text="19:00:00"/>
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@drawable/line_15"/>
+        android:background="#d9d9d9"/>
 
     <LinearLayout
-        android:id="@+id/layout_csdn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/common_item_sel"
+        android:clickable="true"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/schedule_date2_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:text="CSDN博客"/>
+            tools:text="8月25日 周五"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+        <TextView
+            android:id="@+id/schedule_time2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/icon_arrow_light_grey"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="#999999"
+            tools:text="19:00:00"/>
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@drawable/line_15"/>
+        android:background="#d9d9d9"/>
 
     <LinearLayout
-        android:id="@+id/layout_github"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/common_item_sel"
+        android:clickable="true"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
         <TextView
-            android:layout_width="0dp"
+            android:id="@+id/schedule_date3_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:text="github地址"/>
+            tools:text="8月26日 周六"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+        <TextView
+            android:id="@+id/schedule_time3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/icon_arrow_light_grey"/>
+            android:layout_marginLeft="10dp"
+            android:textColor="#999999"
+            tools:text="19:00:00"/>
 
     </LinearLayout>
 
