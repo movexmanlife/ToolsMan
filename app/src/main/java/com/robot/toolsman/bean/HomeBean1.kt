@@ -15,7 +15,7 @@ data class HomeBean(
     override fun describeContents() = 0
 
     override fun writeToParcel(dest: Parcel, flags: Int) = with(dest) {
-        // dfd99999gfdgfdg
+        // 新的
         writeString(text)
         writeTypedList(imgList)
     }
